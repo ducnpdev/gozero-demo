@@ -1,0 +1,9 @@
+Name: ping
+Host: 127.0.0.1
+Port: 8888
+Log:
+  Encoding: plain
+  Level: debug
+Middlewares:
+  Trace: false
+  Prometheus: false
