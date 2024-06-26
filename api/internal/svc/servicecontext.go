@@ -8,8 +8,9 @@ import (
 )
 
 type ServiceContext struct {
-	Config config.Config
-	ABCRpc abc.AbcClient
+	Config  config.Config
+	ABCRpc  abc.AbcClient
+	DmsGrpc abc.AbcClient
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
@@ -17,7 +18,8 @@ func NewServiceContext(c config.Config) *ServiceContext {
 		Target: "dns:///127.0.0.1:8080",
 	})
 	return &ServiceContext{
-		Config: c,
-		ABCRpc: abc.NewAbcClient(a.Conn()),
+		Config:  c,
+		ABCRpc:  abc.NewAbcClient(a.Conn()),
+		DmsGrpc: abc.NewAbcClient(a.Conn()),
 	}
 }

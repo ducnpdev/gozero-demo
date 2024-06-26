@@ -8,6 +8,6 @@ Log:
   Encoding: plain
   Level: debug
 Middlewares:
-  Trace: true
+  Trace: false
   Prometheus: false
-  Stat: true
+  Stat: false
